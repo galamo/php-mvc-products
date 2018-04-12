@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (^\w+$) index.php?controller=$0 [L]
+RewriteRule (^\w+$) index.php/news?action=$1 [L]
+
+RewriteCond %{THE_REQUEST} index\.php
+
